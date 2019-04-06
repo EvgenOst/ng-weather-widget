@@ -1,0 +1,38 @@
+<div class="element-bg-img">
+  <img [src]="currentPlace?.img" alt="" class="img-responsive">
+</div>
+<div class="element-left-bottom">
+  <div class="ele-strip">
+    <ul>
+      <li *ngFor="let type of placesTypes; last as last"
+        [class.anc-bor]="last"
+        (click)="selectType = placesTypeEnum[type]">
+        <a>{{placesTypeEnum[type]}}</a>
+      </li>
+    </ul>
+  </div>
+  <div class="village">
+    <h3>Righteous indignation & like</h3>
+    <span class="line"> </span>
+    <div class="activity_box">
+      <div class="scrollbar" id="style-2">
+        <div class="activity-row" *ngFor="let place of placesList | placeFilterPipe: selectType"
+          (click)="selectPlace.emit(place)">
+          <div class="activity-desc">
+            <h5>{{place.address}}</h5>
+            <p>{{place.type}}</p>
+            <p>{{place.socialInfo.title}}</p>
+            <h6>Tel:{{place.phone | phone}}</h6>
+          </div>
+          <div class="activity-img">
+            <ul>
+              <li><img [src]="place.img" alt="" /></li>
+              <li><img [src]="place.socialInfo.img" alt="" /></li>
+            </ul>
+          </div>
+          <div class="clear"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
