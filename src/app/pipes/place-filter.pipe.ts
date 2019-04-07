@@ -3,7 +3,7 @@ import { Place } from '../models/place.model';
 import { PlacesTypeEnum } from '../models/places-type.enum';
 
 @Pipe({
-  name: 'placeFilterPipe'
+  name: 'placeFilter'
 })
 export class PlaceFilterPipe implements PipeTransform {
 
