@@ -1,5 +1,4 @@
-import { Place } from '../models/place.model';
-import { PlacesTypeEnum } from '../models/places-type.enum';
+import { Place } from '@appCommon/models/place.model';
 
 export const Places: Place[] = [
   {
@@ -18,7 +17,7 @@ export const Places: Place[] = [
       followers: 50,
       following: 100
     },
-    type: PlacesTypeEnum.tours
+    type: 'tours'
   },
   {
     img: 'assets/images/2.jpg',
@@ -36,7 +35,7 @@ export const Places: Place[] = [
       followers: 150,
       following: 1030
     },
-    type: PlacesTypeEnum.fishing
+    type: 'fishing'
   },
   {
     img: 'assets/images/3.jpg',
@@ -54,7 +53,7 @@ export const Places: Place[] = [
       followers: 501,
       following: 1050
     },
-    type: PlacesTypeEnum.hotel
+    type: 'weather'
   },
   {
     img: 'assets/images/4.jpg',
@@ -72,7 +71,7 @@ export const Places: Place[] = [
       followers: 5210,
       following: 10023
     },
-    type: PlacesTypeEnum.tours
+    type: 'fishing'
   },
   {
     img: 'assets/images/5.jpg',
@@ -90,7 +89,7 @@ export const Places: Place[] = [
       followers: 5,
       following: 0
     },
-    type: PlacesTypeEnum.tours
+    type: 'tours'
   },
   {
     img: 'assets/images/6.jpg',
@@ -108,6 +107,6 @@ export const Places: Place[] = [
       followers: 5,
       following: 0
     },
-    type: PlacesTypeEnum.hotel
+    type: 'hotels'
   }
 ];

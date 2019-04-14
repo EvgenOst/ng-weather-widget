@@ -1,19 +1,11 @@
 <h1>Hot Weather Widget</h1>
 <div class="element">
   <div class="element-left">
-    <app-hotels-list-widget
-      [placesList]="places"
-      [currentPlace]="currentPlace"
-      (selectPlace)="onSelectPlace($event)"
-    ></app-hotels-list-widget>
+    <app-hotels-list-widget></app-hotels-list-widget>
   </div>
   <div class="element-right">
-    <app-weather-widget
-      [weather]="currentPlace.weather"
-    ></app-weather-widget>
-    <app-teddy-bear
-      [userInfo]="currentPlace.socialInfo"
-    ></app-teddy-bear>
+    <app-weather-widget></app-weather-widget>
+    <app-teddy-bear></app-teddy-bear>
   </div>
-  <div class="clear"> </div>
+  <div class="clear"></div>
 </div>

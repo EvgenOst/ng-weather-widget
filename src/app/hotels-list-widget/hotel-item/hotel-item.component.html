@@ -1,0 +1,13 @@
+<div class="activity-desc">
+  <h5>{{place.address}}</h5>
+  <p>{{place.type}}</p>
+  <p>{{place.socialInfo.title}}</p>
+  <h6>Tel:{{place.phone | phone}}</h6>
+</div>
+<div class="activity-img">
+  <ul>
+    <li><img [src]="place.img" alt="" /></li>
+    <li><img [src]="place.socialInfo.img" alt="" /></li>
+  </ul>
+</div>
+<div class="clear"> </div>

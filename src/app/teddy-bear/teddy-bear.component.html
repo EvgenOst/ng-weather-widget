@@ -1,18 +1,18 @@
-<div class="teddy-bear" 
-  *ngIf="userInfo">
+<div class="teddy-bear"
+  *ngIf="currentUser | async as user">
   <div class="teddy-text">
-    <h4>{{userInfo.title}}</h4>
+    <h4>{{user.title}}</h4>
     <span class="w-line"> </span>
-    <img [src]="userInfo.img" alt="" class="img-responsive">
+    <img [src]="user.img" alt="" class="img-responsive">
   </div>
   <div class="teddy-follow">
     <ul>
       <li class="folw-h">
-        <h3>{{userInfo.followers}}</h3>
+        <h3>{{user.followers}}</h3>
         <p>Followers</p>
       </li>
       <li>
-        <h3>{{userInfo.following}}</h3>
+        <h3>{{user.following}}</h3>
         <p>Following</p>
       </li>
     </ul>

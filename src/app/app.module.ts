@@ -2,11 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { TeddyBearComponent } from './components/teddy-bear/teddy-bear.component';
-import { HotelsListWidgetComponent } from './components/hotels-list-widget/hotels-list-widget.component';
-import { WeatherWidgetComponent } from './components/weather-widget/weather-widget.component';
-import { PlaceFilterPipe } from './pipes/place-filter.pipe';
-import { PhonePipe } from './pipes/phone.pipe';
+import { TeddyBearComponent } from './teddy-bear/teddy-bear.component';
+import { HotelsListWidgetComponent } from './hotels-list-widget/hotels-list-widget.component';
+import { WeatherWidgetComponent } from './weather-widget/weather-widget.component';
+import { PlaceFilterPipe } from '@appCommon/pipes/place-filter.pipe';
+import { PhonePipe } from '@appCommon/pipes/phone.pipe';
+import { HotelItemComponent } from './hotels-list-widget/hotel-item/hotel-item.component';
+import { MenuPipe } from '@appCommon/pipes/menu.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { PhonePipe } from './pipes/phone.pipe';
     HotelsListWidgetComponent,
     WeatherWidgetComponent,
     PlaceFilterPipe,
-    PhonePipe
+    PhonePipe,
+    HotelItemComponent,
+    MenuPipe
   ],
   imports: [
     BrowserModule

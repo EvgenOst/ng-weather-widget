@@ -1,14 +1,13 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Place } from '../models/place.model';
-import { PlacesTypeEnum } from '../models/places-type.enum';
 
 @Pipe({
   name: 'placeFilter'
 })
 export class PlaceFilterPipe implements PipeTransform {
 
-  transform(places: Place[], selectType: PlacesTypeEnum): Place[] {
-    if (!places || !selectType || selectType === PlacesTypeEnum.weather) {
+  transform(places: Place[], selectType: string): Place[] {
+    if (!places || !selectType) {
       return places;
     }
 
